@@ -1,0 +1,27 @@
+@import '../mixins/mixins'
++breakpoint(md)
+  body
+    font-size: 20px
+  .header::after
+    +translate(-50%, -75%)
+  .middleSpace
+    height: 10em
+    font-size: 1.2em
+  .photos > img + img
+    +margin(top 2em)
+  .steps
+    .pc
+      display: block
+    .mb
+      display: none
+  .footer
+    li
+      display: inline
+      +padding(right 1%)
+      & + li
+        +padding(left 1.5%)
+        border-left: 1px solid #4d4d4d
+    ul
+      +margin(top 1%)
+      & + ul
+        +margin(bottom 1%)
