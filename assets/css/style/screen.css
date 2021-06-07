@@ -10,10 +10,16 @@
     font-size: 1.2em; }
   .photos > img + img {
     margin-top: 2em; }
-  .steps .pc {
-    display: block; }
-  .steps .mb {
-    display: none; }
+  .steps {
+    width: calc(70% - 4em); }
+    .steps .pc {
+      display: block; }
+    .steps .mb {
+      display: none; }
+  .qa .row {
+    width: 70%; }
+  .qa-body {
+    border: 13px solid #f9bf11; }
   .footer li {
     display: inline;
     padding-right: 1%; }
