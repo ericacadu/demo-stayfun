@@ -10,10 +10,18 @@
   .photos > img + img
     +margin(top 2em)
   .steps
+    width: calc(70% - 4em)
     .pc
       display: block
     .mb
       display: none
+  .qa
+    .row
+      width: 70%
+    &-body
+      border: 13px solid $bgColor
+    &-footer
+      font-size: 1.4em
   .footer
     li
       display: inline

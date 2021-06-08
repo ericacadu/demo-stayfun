@@ -9,7 +9,8 @@ body {
   body .wrapper {
     width: calc(100% - 2em);
     max-width: 1920px;
-    padding: 0 1em; }
+    padding: 0 1em;
+    position: relative; }
   body img {
     width: 100%;
     margin: 0 auto; }
@@ -44,11 +45,12 @@ body {
             transform: translate(-50%, -65%); }
 
 .mainContent {
-  min-height: 500px;
   position: relative;
   z-index: 1;
-  background: url("../../images/bg_pattern.png") repeat 50% 0;
-  background-size: 50% auto; }
+  background: url("../../images/bg_pattern.png") repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: 40% auto; }
   .mainContent .wrapper {
     width: 100%;
     padding: 0; }
@@ -83,7 +85,8 @@ body {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative; }
   .middleSpace::before {
     content: '';
     display: block;
@@ -149,7 +152,7 @@ body {
 
 .column {
   margin: 2em 0; }
-  .column .col:nth-child(2) {
+  .column .col:nth-child(2n) {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -160,11 +163,11 @@ body {
     margin: 0; }
 
 .steps {
-  width: 70%;
+  width: calc(90% - 4em);
+  padding: 1em 2em 2em;
   background: #fef6de;
-  padding: 2em;
-  margin: 2em auto;
-  border-radius: 1em; }
+  border-radius: 1em;
+  margin: 2em auto 0; }
   .steps .pc {
     display: none; }
   .steps .col {
@@ -188,6 +191,33 @@ body {
           -ms-flex: 9;
               flex: 9;
       padding-left: 1em; }
+
+.qa {
+  background: #EADAB0 url("../../images/bg_pattern.png") repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: 40% auto;
+  margin-top: 2em; }
+  .qa .row {
+    width: 90%; }
+  .qa-head {
+    padding: 1.5em 0;
+    width: 70%; }
+  .qa-body {
+    padding: 1em;
+    background: #FFFAD6;
+    border: 5px solid #f9bf11;
+    border-radius: 1em; }
+  .qa-footer {
+    text-align: center;
+    padding: 1em 0;
+    font-weight: 700;
+    font-size: 1.2em; }
+    .qa-footer a {
+      display: inline-block;
+      color: #5700FF; }
+  .qa table tr:nth-child(2n+1):not(:first-child) td {
+    padding-top: 1.5em; }
 
 .note {
   position: relative;

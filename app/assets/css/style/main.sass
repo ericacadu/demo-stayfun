@@ -13,6 +13,7 @@ body
     width: calc(100% - 2em)
     max-width: 1920px
     +padding(0 1em)
+    +relative(0)
   img
     +size(100%)
     +margin(0 auto)
@@ -42,15 +43,16 @@ body
     +translate(-50%, -65%)
 
 .mainContent
-  min-height: 500px
   +relative(0)
   z-index: 1
-  background: url('../../images/bg_pattern.png') repeat 50% 0
-  background-size: 50% auto
+  background: url('../../images/bg_pattern.png') repeat
+  background-attachment: fixed
+  background-position: top center
+  background-size: 40% auto
   .wrapper
     width: 100%
     +padding(0)
-
+    
 .banner
   +relative(0)
   +padding(top 5vh)
@@ -67,6 +69,7 @@ body
   background-size: auto 100%
   +padding(2em 0)
   +flex
+  +relative(0)
   &::before
     content: ''
     display: block
@@ -109,7 +112,7 @@ body
 .column
   +margin(2em 0)
   .col
-    &:nth-child(2)
+    &:nth-child(2n)
       justify-content: flex-end
       +margin(2em 0)
     img
@@ -117,11 +120,11 @@ body
       margin: 0
 
 .steps
-  width: 70%
+  width: calc(90% - 4em)
+  +padding(1em 2em 2em)
   background: $secondary
-  +padding(2em)
-  +margin(2em auto)
   +border-radius(1em)
+  +margin(2em auto 0)
   .pc
     display: none
   .col
@@ -133,6 +136,34 @@ body
     & + p
       flex: 9
       +padding(left 1em)
+
+.qa
+  background: #EADAB0 url('../../images/bg_pattern.png') repeat
+  background-attachment: fixed
+  background-position: top center
+  background-size: 40% auto
+  +margin(top 2em)
+  .row
+    width: 90%
+  &-head
+    +padding(1.5em 0)
+    width: 70%
+  &-body
+    +padding(1em)
+    background: #FFFAD6
+    border: 5px solid $bgColor
+    +border-radius(1em)
+  &-footer
+    text-align: center
+    +padding(1em 0)
+    font-weight: 700
+    font-size: 1.2em
+    a
+      display: inline-block
+      color: #5700FF
+  table
+    tr:nth-child(2n+1):not(:first-child) td
+      padding-top: 1.5em
 
 .note
   +relative(0)
